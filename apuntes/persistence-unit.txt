@@ -1,0 +1,2 @@
+dialecto usado a partir de MySQL usado a partir de la 5.5
+https://stackoverflow.com/questions/43716068/invalid-syntax-error-type-myisam-in-ddl-generated-by-hibernate

@@ -1,0 +1,4 @@
+mysql-connector-java
+version 8.x
+Se hace uso de la versión 8.x de MySQL que utiliza una encriptación de clave que no soporta la versión 6.x
+
