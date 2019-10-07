@@ -1,6 +1,8 @@
 package com.arquitecturajava.repositorios;
 
-public interface NoticiaRepository {
+import com.arquitecturajava.bo.Noticia;
+
+public interface NoticiaRepository extends GenericRepository<Noticia, String> {
 
 
 }

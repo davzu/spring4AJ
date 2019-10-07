@@ -1,5 +1,7 @@
 package com.arquitecturajava.repositorios;
 
-public interface ComentarioRepository  {
+import com.arquitecturajava.bo.Comentario;
+
+public interface ComentarioRepository extends GenericRepository<Comentario, Integer>  {
 
 }
