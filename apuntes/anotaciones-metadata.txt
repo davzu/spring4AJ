@@ -1,0 +1,10 @@
+
+@ManyToOne
+Cuando se hace el select lo hace con fetch eager por default.
+
+@OneToMany
+Cuando se hace el select lo hace con fetch lazy por default.
+
+
+
+

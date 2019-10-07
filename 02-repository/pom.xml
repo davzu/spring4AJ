@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.arquitecturajava</groupId>
-	<artifactId>01-jpa</artifactId>
+	<artifactId>02-repository</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
@@ -45,8 +45,6 @@
 			<scope>test</scope>
 		</dependency>
 
-
 	</dependencies>
-
 
 </project>
