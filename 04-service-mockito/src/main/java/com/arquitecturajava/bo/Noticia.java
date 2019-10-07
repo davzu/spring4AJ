@@ -1,0 +1,66 @@
+package com.arquitecturajava.bo;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Noticia implements Serializable {
+	
+	@Id
+	private String titulo;
+	private String autor;
+	private Date fecha;	
+	
+	@OneToMany(mappedBy="noticia", cascade=CascadeType.ALL)
+	private List<Comentario> comentarios = new ArrayList<>();
+	
+	public Noticia() {
+	}
+
+	public Noticia(String titulo, String autor, Date fecha) {
+		this.titulo = titulo;
+		this.autor = autor;
+		this.fecha = fecha;
+	}
+	
+	public Noticia(String titulo) {
+		this.titulo = titulo;
+	}
+	
+	public void addComentario(Comentario comentario) {
+		comentarios.add(comentario);
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	public String getAutor() {
+		return autor;
+	}
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+	public Date getFecha() {
+		return fecha;
+	}
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+	public List<Comentario> getComentarios() {
+		return comentarios;
+	}
+	public void setComentarios(List<Comentario> comentarios) {
+		this.comentarios = comentarios;
+	}
+	
+}
