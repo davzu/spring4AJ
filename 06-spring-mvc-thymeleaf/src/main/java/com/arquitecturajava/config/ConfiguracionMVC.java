@@ -48,7 +48,6 @@ public class ConfiguracionMVC implements ApplicationContextAware {
 		resolver.setTemplateMode(TemplateMode.HTML);
 		return resolver;
 	}
-
 	
 	// relacionar la presentación con el registro(bean / servicio / repositorio)
 	@Override

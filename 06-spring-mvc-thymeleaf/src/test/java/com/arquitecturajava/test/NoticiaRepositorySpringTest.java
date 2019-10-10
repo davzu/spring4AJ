@@ -10,11 +10,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.arquitecturajava.bo.Noticia;
-import com.arquitecturajava.config.ConfiguracionSpring;
 import com.arquitecturajava.repositorios.NoticiaRepository;
+import com.arquitecturajava.test.config.ConfiguracionSpringTest;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=ConfiguracionSpring.class)
+@ContextConfiguration(classes=ConfiguracionSpringTest.class)
 public class NoticiaRepositorySpringTest {
 	
 	@Autowired

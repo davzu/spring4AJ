@@ -2,7 +2,6 @@ package com.arquitecturajava.test;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,17 +9,13 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.arquitecturajava.bo.Noticia;
-import com.arquitecturajava.config.ConfiguracionSpring;
 import com.arquitecturajava.repositorios.ComentarioRepository;
-import com.arquitecturajava.repositorios.GenericRepository;
 import com.arquitecturajava.repositorios.NoticiaRepository;
-import com.arquitecturajava.repositorios.jpa.ComentarioRepositoryJPA;
-import com.arquitecturajava.repositorios.jpa.NoticiaRepositoryJPA;
 import com.arquitecturajava.servicios.ServicioNoticia;
-import com.arquitecturajava.servicios.jpa.ServicioNoticiaJPA;
+import com.arquitecturajava.test.config.ConfiguracionSpringTest;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=ConfiguracionSpring.class)
+@ContextConfiguration(classes=ConfiguracionSpringTest.class)
 public class ServicioNoticiaSpringTest {
 	
 	@Autowired

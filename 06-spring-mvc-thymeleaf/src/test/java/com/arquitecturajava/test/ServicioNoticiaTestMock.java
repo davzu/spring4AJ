@@ -10,14 +10,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.arquitecturajava.bo.Noticia;
-import com.arquitecturajava.repositorios.jpa.ComentarioRepositoryJPA;
 import com.arquitecturajava.repositorios.jpa.NoticiaRepositoryJPA;
 import com.arquitecturajava.servicios.jpa.ServicioNoticiaJPA;
 
 public class ServicioNoticiaTestMock {
 	
-	private NoticiaRepositoryJPA noticiaRepository;
-	private ComentarioRepositoryJPA comentarioRepository;
 	private ServicioNoticiaJPA servicioNoticia;
 	
 	@Before

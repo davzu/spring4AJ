@@ -8,6 +8,6 @@ import org.springframework.context.annotation.Import;
 @ComponentScan("com.arquitecturajava")
 @Import({ConfiguracionPersistencia.class, ConfiguracionMVC.class})
 public class ConfiguracionSpring  {
-	
+
 
 }
