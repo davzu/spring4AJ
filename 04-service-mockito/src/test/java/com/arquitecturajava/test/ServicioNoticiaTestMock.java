@@ -16,8 +16,6 @@ import com.arquitecturajava.servicios.jpa.ServicioNoticiaJPA;
 
 public class ServicioNoticiaTestMock {
 	
-	private NoticiaRepositoryJPA noticiaRepository;
-	private ComentarioRepositoryJPA comentarioRepository;
 	private ServicioNoticiaJPA servicioNoticia;
 	
 	@Before

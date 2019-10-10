@@ -1,0 +1,2 @@
+estructura web para un proyecto maven
+src/main/webapp/WEB-INF/
