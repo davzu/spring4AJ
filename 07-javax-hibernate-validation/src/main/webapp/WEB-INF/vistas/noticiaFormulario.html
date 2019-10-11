@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:object="${noticia}" action="insertar" method="post">
+<!-- 	Lo que seria si no se usara thymeleaf -->
+<!-- 	<p>Título:<input type="text" name="titulo"></p> -->
+		
+<!-- 	Usando el motor de plantillas thymeleaf -->
+		<p>Título:<input type="text" th:field="*{titulo}"></p>
+		<p>Autor:<input type="text" th:field="*{autor}"></p>
+		<p>Fecha:<input type="text" th:field="*{fecha}"></p>
+		<input type="submit" value="Insertar" />
+	</form>
+</body>
+</html>

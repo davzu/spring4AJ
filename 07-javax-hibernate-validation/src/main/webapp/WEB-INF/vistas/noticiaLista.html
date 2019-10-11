@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Título</th>
+				<th>Autor</th>
+				<th>Fecha</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="noticia : ${noticias}">
+				<td th:text="${noticia.titulo}"></td>
+				<td th:text="${noticia.autor}"></td>
+				<td th:text="${#dates.format(noticia.fecha, 'dd-MMM-yyyy')}"></td>
+				<td><a th:href="@{borrarNoticia(titulo=${noticia.titulo})}">Borrar</a></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<form action="noticiaFormulario">
+		<input type="submit" value="Nueva" />
+	</form>
+	
+</body>
+</html>
