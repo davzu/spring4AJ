@@ -10,15 +10,18 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 public class Noticia implements Serializable {
 	
 	@Id
 	private String titulo;
 	private String autor;
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Date fecha;	
 	
-	@OneToMany(mappedBy="noticia", cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="noticia", cascade=CascadeType.ALL, orphanRemoval=true)
 	private List<Comentario> comentarios = new ArrayList<>();
 	
 	public Noticia() {

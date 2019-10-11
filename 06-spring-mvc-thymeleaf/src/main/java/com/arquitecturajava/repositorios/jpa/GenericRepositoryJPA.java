@@ -48,7 +48,11 @@ public abstract class GenericRepositoryJPA<T, K> implements GenericRepository<T,
 	@Transactional
 	@Override
 	public void delete(T object) {
-		entityManager.remove(object);
+		// entityManager.remove(object);
+		
+		// como es un objeto que proviene desde la web y solo se envía el título(PK), 
+		// se debe hace el merge previamente, ya que no es una consulta directa (entityManager.find(....))
+		entityManager.remove(entityManager.merge(object));
 	}
 
 	public EntityManager getEntityManager() {

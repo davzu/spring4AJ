@@ -1,0 +1,6 @@
+
+${}
+Muestra una variable
+
+*{}
+Muestra un campo de un objeto

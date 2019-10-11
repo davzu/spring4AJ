@@ -1,0 +1,17 @@
+
+Cuando se realiza el elimina(remove) o actualiza(persist) un objeto debe primero haberse realizado la consulta para obtenerlo.
+
+Lo que se puede hacer es hacer merge entre el objeto que se tiene con el entityManager, código:
+entityManager.remove(entityManager.merge(object));
+
+A consecuencia del código anterior, si una columna de la tabla fuése FK de otra, hay que especificar que se borren los registros que hacen referencia, 
+código - se añade orpahnRemoval=true
+@OneToMany(mappedBy="noticia", cascade=CascadeType.ALL, orphanRemoval=true)
+
+Si se realiza la consulta primero y luego se elimina el registro no sería necesario orpahnRemoval=true para eliminar los registros a los que hace referencia, 
+solo necesataría cascade=CascadeType.ALL
+
+
+
+
+

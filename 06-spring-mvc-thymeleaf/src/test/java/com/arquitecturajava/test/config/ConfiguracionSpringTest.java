@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @ComponentScan({"com.arquitecturajava.servicios", "com.arquitecturajava.repositorios"})
-@Import({ConfiguracionPersistencia.class})
+@Import({ConfiguracionPersistenciaTest.class})
 public class ConfiguracionSpringTest  {
 
 

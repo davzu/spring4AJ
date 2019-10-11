@@ -1,0 +1,10 @@
+
+spring-context
+org.springframework.ui.Model
+Modelo de spring
+Permite añadir objetos al modelo que se intercambia entre el controlador y la vista.
+
+spring-web
+org.springframework.web.bind.annotation.ModelAttribute
+@ModelAttribute
+Anotación que permite identificar los parámetros que pasamos por post en el objeto que acompaña a la anotación.

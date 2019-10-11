@@ -19,7 +19,7 @@ public class SpringWebInicializador implements WebApplicationInitializer {
 		// spring con la web
 		contexto.setServletContext(servletContext);
 		
-		ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet());
+		ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(contexto));
 		servlet.setLoadOnStartup(1);
 		servlet.addMapping("/");
 	}
